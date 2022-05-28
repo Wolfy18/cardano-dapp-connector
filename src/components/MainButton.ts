@@ -7,14 +7,18 @@ import { NamiEnabler } from '../api/NamiAdapter';
 import { YoroiEnabler } from '../api/YoroiAdapter';
 import { useStyles } from '../hooks/useStyles';
 import { WalletDetail } from './WalletDetail';
-import '@shoelace-style/shoelace/dist/components/button/button';
-import '@shoelace-style/shoelace/dist/components/dialog/dialog';
-import '@shoelace-style/shoelace/dist/components/alert/alert';
 
-window.customElements.define('flint-enabler', component(FlintEnabler));
-window.customElements.define('nami-enabler', component(NamiEnabler));
-window.customElements.define('yoroi-enabler', component(YoroiEnabler));
-window.customElements.define('wallet-detail', component(WalletDetail));
+if (!window.customElements.get('flint-enabler'))
+  window.customElements.define('flint-enabler', component(FlintEnabler));
+
+if (!window.customElements.get('nami-enabler'))
+  window.customElements.define('nami-enabler', component(NamiEnabler));
+
+if (!window.customElements.get('yoroi-enabler'))
+  window.customElements.define('yoroi-enabler', component(YoroiEnabler));
+
+if (!window.customElements.get('wallet-detail'))
+  window.customElements.define('wallet-detail', component(WalletDetail));
 
 function MainButton(this: any) {
   useStyles(this, [

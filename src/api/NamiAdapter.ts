@@ -1,8 +1,7 @@
 import { css } from 'lit';
 import { html, useState, useEffect } from 'haunted';
 import { useStyles } from '../hooks/useStyles';
-import '@shoelace-style/shoelace/dist/components/button/button';
-import '@shoelace-style/shoelace/dist/components/card/card';
+
 
 function NamiEnabler(this: any) {
   useStyles(this, [css``]);

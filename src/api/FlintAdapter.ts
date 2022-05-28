@@ -1,9 +1,6 @@
 import { css } from 'lit';
 import { html, useState, useEffect } from 'haunted';
 import { useStyles } from '../hooks/useStyles';
-import '@shoelace-style/shoelace/dist/components/button/button';
-import '@shoelace-style/shoelace/dist/components/card/card';
-import '@shoelace-style/shoelace/dist/components/icon/icon';
 
 function FlintEnabler(this: any) {
   useStyles(this, [css``]);
